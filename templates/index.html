@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto Fácil</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+    <!-- <script src="{{ url_for('static', filename='js/index.js') }}" defer></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}"> -->
+
+    <script src="../static/js/index.js" defer></script>
+    <link rel="stylesheet" href="../static/css/index.css">
+</head>
+<body>
+
+    <div class="shadow">
+        <header class="container">
+            <h1>Foto Fácil</h1>
+            <p>Edição de foto simplificada</p>
+        </header>
+
+        <main class="container">
+            <form action="">
+                <h3>Upload do Arquivo</h3>
+                <div class="input-group mb-3">
+                    <input type="file" class="form-control" id="inputFile">
+                </div>
+
+                <section class="radioGroup">
+                    <h3>Proporção</h3>
+                    <div class="input-group m-3 d-flex justify-content-center">
+                        <div class="input-group-text checkLongo"">
+                            <input class="form-check-input mt-0" type="radio" name="radioProp" aria-label="Radio button for following text input" checked>
+                            <label for="" style="padding-left: 1rem;">Instagram ou Facebook (feed) - 4:5, 1080x1350</label>
+                        </div>
+                    </div>
+
+                    <div class="input-group m-3 d-flex justify-content-center">
+                        <div class="input-group-text checkLongo">
+                            <input class="form-check-input mt-0" type="radio" name="radioProp" aria-label="Radio button for following text input">
+                            <label for="" style="padding-left: 1rem;">Instagram ou Facebook (Stories) - 9:16, 1080x1920</label>
+                        </div>
+                    </div>
+
+                    <div class="input-group m-3 d-flex justify-content-center">
+                        <div class="input-group-text checkLongo">
+                            <input class="form-check-input mt-0" type="radio" name="radioProp" aria-label="Radio button for following text input">
+                            <label for="" style="padding-left: 1rem;">Facebook (capa) - 16:9, 1920x1080</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group m-3 d-flex justify-content-center">
+                        <div class="input-group-text checkLongo">
+                            <input class="form-check-input mt-0" type="radio" name="radioProp" aria-label="Radio button for following text input">
+                            <label for="" style="padding-left: 1rem;">Linkedin (foto de perfil) - 1:1, 800x800</label>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="radioGroup">
+                    <h3>Filtro</h3>
+                    <div id="filtros">
+                        <div class="input-group m-3 d-flex justify-content-center">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" type="radio" name="radioFil" aria-label="Radio button for following text input" checked>
+                                <label for="" style="padding-left: 1rem;">Nenhum</label>
+                            </div>
+                        </div>
+
+                        <div class="input-group m-3 d-flex justify-content-center">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" type="radio" name="radioFil" aria-label="Radio button for following text input">
+                                <label for="" style="padding-left: 1rem;">Vermelho</label>
+                            </div>
+                        </div>
+
+                        <div class="input-group m-3 d-flex justify-content-center">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" type="radio" name="radioFil" aria-label="Radio button for following text input">
+                                <label for="" style="padding-left: 1rem;">Verde</label>
+                            </div>
+                        </div>
+
+
+                        <div class="input-group m-3 d-flex justify-content-center">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" type="radio" name="radioFil" aria-label="Radio button for following text input">
+                                <label for="" style="padding-left: 1rem;">Azul</label>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group m-3 d-flex justify-content-center">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" type="radio" name="radioFil" aria-label="Radio button for following text input">
+                                <label for="" style="padding-left: 1rem;">Cinza</label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="radioGroup">
+                    <h3>Detecção de Rosto</h3>
+                    <div class="d-flex justify-content-center" style="gap: 1rem; width: 20rem; margin: auto;">
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" type="radio" name="radioDetect" aria-label="Radio button for following text input" checked>
+                                <label for="" style="padding-left: 1rem;">Detectar Automaticamente</label>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" type="radio" name="radioDetect" aria-label="Radio button for following text input">
+                                <label for="" style="padding-left: 1rem;">Detectar Manualmente</label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="divRes" id="divRes">
+                    <div class="dot"></div>
+                    <img id="imgRes" class="imgRes" src="../static/img/background.jpg" alt="Imagem atualmente sendo editada">
+                </div>
+
+
+                <input type="submit" class="btn btn-primary" value="Editar Imagem">
+            </form>
+        </main>
+
+        <footer>
+            <p>
+                Copyright &#169; 
+                <a href="https://github.com/nathanhgo">@nathanhgo</a>
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
