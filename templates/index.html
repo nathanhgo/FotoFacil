@@ -23,7 +23,7 @@
         </header>
 
         <main class="container">
-            <form action="">
+            <form id="mainForm">
                 <h3>Upload do Arquivo</h3>
                 <div class="input-group mb-3">
                     <input type="file" class="form-control" id="inputFile">
@@ -33,28 +33,28 @@
                     <h3>Proporção</h3>
                     <div class="input-group m-3 d-flex justify-content-center">
                         <div class="input-group-text checkLongo"">
-                            <input class="form-check-input mt-0" type="radio" name="radioProp" aria-label="Radio button for following text input" checked>
+                            <input class="form-check-input mt-0" type="radio" name="radioProp" value="1" aria-label="Radio button for following text input" checked>
                             <label for="" style="padding-left: 1rem;">Instagram ou Facebook (feed) - 4:5, 1080x1350</label>
                         </div>
                     </div>
 
                     <div class="input-group m-3 d-flex justify-content-center">
                         <div class="input-group-text checkLongo">
-                            <input class="form-check-input mt-0" type="radio" name="radioProp" aria-label="Radio button for following text input">
+                            <input class="form-check-input mt-0" type="radio" name="radioProp" value="2" aria-label="Radio button for following text input">
                             <label for="" style="padding-left: 1rem;">Instagram ou Facebook (Stories) - 9:16, 1080x1920</label>
                         </div>
                     </div>
 
                     <div class="input-group m-3 d-flex justify-content-center">
                         <div class="input-group-text checkLongo">
-                            <input class="form-check-input mt-0" type="radio" name="radioProp" aria-label="Radio button for following text input">
+                            <input class="form-check-input mt-0" type="radio" name="radioProp" value="3" aria-label="Radio button for following text input">
                             <label for="" style="padding-left: 1rem;">Facebook (capa) - 16:9, 1920x1080</label>
                         </div>
                     </div>
                     
                     <div class="input-group m-3 d-flex justify-content-center">
                         <div class="input-group-text checkLongo">
-                            <input class="form-check-input mt-0" type="radio" name="radioProp" aria-label="Radio button for following text input">
+                            <input class="form-check-input mt-0" type="radio" name="radioProp" value="4" aria-label="Radio button for following text input">
                             <label for="" style="padding-left: 1rem;">Linkedin (foto de perfil) - 1:1, 800x800</label>
                         </div>
                     </div>
@@ -65,21 +65,21 @@
                     <div id="filtros">
                         <div class="input-group m-3 d-flex justify-content-center">
                             <div class="input-group-text">
-                                <input class="form-check-input mt-0" type="radio" name="radioFil" aria-label="Radio button for following text input" checked>
+                                <input class="form-check-input mt-0" type="radio" name="radioFil" value="0" aria-label="Radio button for following text input" checked>
                                 <label for="" style="padding-left: 1rem;">Nenhum</label>
                             </div>
                         </div>
 
                         <div class="input-group m-3 d-flex justify-content-center">
                             <div class="input-group-text">
-                                <input class="form-check-input mt-0" type="radio" name="radioFil" aria-label="Radio button for following text input">
+                                <input class="form-check-input mt-0" type="radio" name="radioFil" value="1" aria-label="Radio button for following text input">
                                 <label for="" style="padding-left: 1rem;">Vermelho</label>
                             </div>
                         </div>
 
                         <div class="input-group m-3 d-flex justify-content-center">
                             <div class="input-group-text">
-                                <input class="form-check-input mt-0" type="radio" name="radioFil" aria-label="Radio button for following text input">
+                                <input class="form-check-input mt-0" type="radio" name="radioFil" value="2" aria-label="Radio button for following text input">
                                 <label for="" style="padding-left: 1rem;">Verde</label>
                             </div>
                         </div>
@@ -87,14 +87,14 @@
 
                         <div class="input-group m-3 d-flex justify-content-center">
                             <div class="input-group-text">
-                                <input class="form-check-input mt-0" type="radio" name="radioFil" aria-label="Radio button for following text input">
+                                <input class="form-check-input mt-0" type="radio" name="radioFil" value="3" aria-label="Radio button for following text input">
                                 <label for="" style="padding-left: 1rem;">Azul</label>
                             </div>
                         </div>
                         
                         <div class="input-group m-3 d-flex justify-content-center">
                             <div class="input-group-text">
-                                <input class="form-check-input mt-0" type="radio" name="radioFil" aria-label="Radio button for following text input">
+                                <input class="form-check-input mt-0" type="radio" name="radioFil" value="4" aria-label="Radio button for following text input">
                                 <label for="" style="padding-left: 1rem;">Cinza</label>
                             </div>
                         </div>
@@ -106,14 +106,14 @@
                     <div class="d-flex justify-content-center" style="gap: 1rem; width: 20rem; margin: auto;">
                         <div class="input-group">
                             <div class="input-group-text">
-                                <input class="form-check-input mt-0" type="radio" name="radioDetect" aria-label="Radio button for following text input" checked>
+                                <input class="form-check-input mt-0" type="radio" name="radioDetect" value="1" aria-label="Radio button for following text input" checked>
                                 <label for="" style="padding-left: 1rem;">Detectar Automaticamente</label>
                             </div>
                         </div>
 
                         <div class="input-group">
                             <div class="input-group-text">
-                                <input class="form-check-input mt-0" type="radio" name="radioDetect" aria-label="Radio button for following text input">
+                                <input class="form-check-input mt-0" type="radio" name="radioDetect" value="2" aria-label="Radio button for following text input">
                                 <label for="" style="padding-left: 1rem;">Detectar Manualmente</label>
                             </div>
                         </div>
@@ -122,7 +122,7 @@
 
                 <div class="divRes" id="divRes">
                     <div class="dot"></div>
-                    <img id="imgRes" class="imgRes" src="../static/img/background.jpg" alt="Imagem atualmente sendo editada">
+                    <img id="imgRes" class="imgRes" alt="Insira uma imagem para detectar o rosto">
                 </div>
 
 

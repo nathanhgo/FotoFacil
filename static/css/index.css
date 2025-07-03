@@ -111,6 +111,10 @@ main .form-check-input:checked {
     border: 1px solid var(--purple);
 }
 
+#divRes {
+    display: none;
+}
+
 .imgRes {
     width: 500px;
     z-index: 10;
